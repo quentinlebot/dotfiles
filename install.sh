@@ -21,6 +21,7 @@ echo "Installing official packages..."
 sudo pacman -S --needed --noconfirm \
     bat \
     btop \
+    coreutils \
     eza \
     fd \
     fzf \
@@ -49,6 +50,7 @@ sudo pacman -S --needed --noconfirm \
 echo "Installing AUR packages..."
 yay -S --needed --noconfirm \
     lazygit \
+    lstr \
     opencode-ai-bin \
     starship \
     ttf-hack-nerd \
