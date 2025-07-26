@@ -1,6 +1,8 @@
 background-opacity = 0.25
 background-blur-radius = 10
 
+# theme = catppuccin-macchiato
+
 font-family = JetBrainsMonoNL Nerd Font 
 font-size = 12
 
