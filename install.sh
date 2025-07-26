@@ -20,6 +20,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installing official packages..."
 sudo pacman -S --needed --noconfirm \
     bat \
+    btop \
+    eza \
     fd \
     fzf \
     ghostty \
@@ -35,6 +37,7 @@ sudo pacman -S --needed --noconfirm \
     ripgrep \
     stow \
     tmux \
+    tldr \
     tree \
     tree-sitter \
     zoxide \
