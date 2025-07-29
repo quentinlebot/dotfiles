@@ -1,5 +1,5 @@
-# background-opacity = 0.25
-# background-blur-radius = 10
+background-opacity = 0.25
+background-blur-radius = 10
 
 # theme = catppuccin-macchiato
 
