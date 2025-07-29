@@ -15,6 +15,8 @@ sudo pacman -Syu --noconfirm
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Install open-code
+curl -fsSL https://opencode.ai/install | bash
 
 # Install packages from official repositories
 echo "Installing official packages..."
@@ -51,7 +53,6 @@ echo "Installing AUR packages..."
 yay -S --needed --noconfirm \
     lazygit \
     lstr \
-    opencode-ai-bin \
     starship \
     ttf-hack-nerd \
     ttf-jetbrains-mono-nerd
