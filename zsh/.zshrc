@@ -3,7 +3,16 @@ if command -v dircolors >/dev/null 2>&1; then
     eval "$(dircolors -b)"
 fi
 
-# source $ZSH/oh-my-zsh.sh
+# Disable oh-my-zsh theme (using Starship)
+ZSH_THEME=""
+
+# zsh plugins (must be before sourcing oh-my-zsh)
+plugins=(
+    git 
+    web-search
+)
+
+source $ZSH/oh-my-zsh.sh
 
 # Zoxide
 eval "$(zoxide init zsh)"
@@ -26,14 +35,7 @@ set -o vi
 export EDITOR=nvim
 export VISUAL=nvim
 
-# zsh plugins
-plugins=(
-    git 
-    ## with oh-my-zsh and not homebrew
-    # zsh-autosuggestions ( git clone <find link in the repo> and uncomment  )
-    # zsh-syntax-highlighting ( git clone <find link in the repo> and uncomment )
-    web-search
-)
+
 
 # -------------------ALIAS----------------------
 # These alias need to have the same exact space as written here
@@ -95,3 +97,6 @@ fi
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# opencode
+export PATH=/home/snowtea/.opencode/bin:$PATH
