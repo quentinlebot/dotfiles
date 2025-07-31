@@ -65,8 +65,25 @@ c-h/j/j/k/l move to left/bottom/top/right window
 
 <leader>gb git blame
 
+## quicksearch
+
+\* on a word to search for it, n and N to next and previous match
+
+## registers
+
+y yank to default register, it's a queue
+:reg to show registers content
+"1p to past the register 1 content
+"+p to past the clipboard content, like ctrl shift v
+:let @+=@% copy current file name to clipboard
+:let @+=$(ls) copy current dir content to clipboard
+:redir @a | <some ex command> | redir END copy output of the command to register a
+
 ## misc
 
+<leader>fr find recent files
+<leader>fc find config files
+<leader>cp markdown preview
 <leader>sc command history
 <leader>sk telescope search thru shortcuts
 <leader>bb to cycle between current and previous buffers
@@ -98,12 +115,15 @@ gg"+yG copy all content to ciplboard
 cc change the whole line
 C change the end of the line
 :%s/foo/bar/g substitute all occurrences of "foo" to "bar"
+viw stand for select inner word, use p next to paste the copied word
 
 > > and << indent the line
 > > vap and vip select the current paragraphe
 > > 0dG delete from the current to the end of the page
+> > :%s/search/replace/g replace all occurrences of "search" to "replace"
+> > %s/search/replace/gc replace all occurrences of "search" to "replace" with confirmation
 
-:r !<cmd> ! for exec shell cmd, r to output result of the cmd in the cursor position
-:args `find . -type f` put all files from the current dir to args
-:argdo %s/search/replace/g run a cmd for every matching files
-argdo %s/search/replace/g | update
+> > :r !<cmd> ! for exec shell cmd, r to output result of the cmd in the cursor position
+> > :args `find . -type f` put all files from the current dir to args
+> > :argdo %s/search/replace/g run a cmd for every matching files
+> > argdo %s/search/replace/g | update
