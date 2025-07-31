@@ -52,6 +52,7 @@ export VISUAL=nvim
 alias c="clear"
 alias e="exit"
 alias vim="nvim"
+alias exegol='sudo -E $(echo ~/.local/bin/exegol)'
 
 # Tmux 
 alias tmux="tmux -f $TMUX_CONF"
