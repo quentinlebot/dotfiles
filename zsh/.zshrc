@@ -73,6 +73,7 @@ alias oc="opencode"
 alias exegol="sudo -E $(echo ~/.local/bin/exegol)"
 alias cd="z"
 alias cat="bat --paging=always --color=always"
+alias pacman="sudo pacman"
 
 # Tmux 
 alias tmux="tmux -f $TMUX_CONF"
@@ -89,7 +90,7 @@ alias nzo="~/scripts/zoxide_openfiles_nvim.sh"
 
 # Enhanced ls with eza (install with: yay -S eza)
 if command -v eza >/dev/null 2>&1; then
-    alias ls="eza --no-filesize --long --color=always --icons=always --no-user"
+    alias ls="eza --long --color=always --icons=always --no-user"
 else
     alias ls="ls --color=auto"
 fi 
