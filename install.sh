@@ -53,6 +53,7 @@ sudo pacman -S --needed --noconfirm \
 # Install packages from AUR
 echo "Installing AUR packages..."
 yay -S --needed --noconfirm \
+  gita \
   lazydocker \
   lazygit \
   lstr \
