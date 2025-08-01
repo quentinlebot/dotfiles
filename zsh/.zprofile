@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 #------------All PATHS------------
 # Add local ~/scripts to the PATH
 export PATH="$HOME/scripts:$PATH"
-export XDG_CONFIG_HOME="$HIME/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Tmux
 export TMUX_CONF=~/.config/tmux/tmux.conf
