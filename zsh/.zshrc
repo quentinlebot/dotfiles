@@ -88,6 +88,15 @@ alias fman="compgen -c | fzf | xargs man"
 # zoxide (called from ~/scripts/)
 alias nzo="~/scripts/zoxide_openfiles_nvim.sh"
 
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # Enhanced ls with eza (install with: yay -S eza)
 if command -v eza >/dev/null 2>&1; then
     alias ls="eza --long --color=always --icons=always --no-user"
