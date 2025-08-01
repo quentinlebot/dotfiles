@@ -22,10 +22,11 @@ f find window
 
 ## Panes
 
-% vertical split
-" horizontal split
-
-o swap panes
+<leader>- vertical split
+<leader>| horizontal split
+C-h/j/k/l move to left/bottom/top/right pane
+C-d delete pane
+<leader> o show current sessions
 q show pane numbers
 x kill pane
 
