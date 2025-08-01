@@ -125,6 +125,9 @@ format = "[ $path ]($style)"
 disabled = true
 #style = "bg:surface0 fg:text"
 
+[aws]
+disabled = true
+
 [custom.giturl]
 # disabled = true
 description = "Display symbol for remote Git server"
