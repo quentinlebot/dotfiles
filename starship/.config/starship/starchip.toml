@@ -128,6 +128,9 @@ disabled = true
 [aws]
 disabled = true
 
+[gcloud]
+disabled = true
+
 [custom.giturl]
 # disabled = true
 description = "Display symbol for remote Git server"
