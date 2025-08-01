@@ -23,14 +23,18 @@ sh -c "$(curl -sLo- https://superfile.netlify.app/install.sh)"
 # Install packages from official repositories
 echo "Installing official packages..."
 sudo pacman -S --needed --noconfirm \
+  7zip \
   bat \
   btop \
   coreutils \
   eza \
   fd \
+  ffmpeg \
   fzf \
   ghostty \
   git \
+  imagemagick \
+  jq \
   lua \
   luajit \
   luarocks \
@@ -38,7 +42,9 @@ sudo pacman -S --needed --noconfirm \
   nodejs \
   npm \
   make \
+  poppler \
   prettier \
+  resvg \
   ripgrep \
   stow \
   tmux \
@@ -48,7 +54,8 @@ sudo pacman -S --needed --noconfirm \
   zoxide \
   zsh \
   zsh-autosuggestions \
-  zsh-syntax-highlighting
+  zsh-syntax-highlighting \
+  yazi
 
 # Install packages from AUR
 echo "Installing AUR packages..."
