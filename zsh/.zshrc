@@ -44,6 +44,23 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 
+#----- Sesh config------ 
+function sesh-sessions() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+zle     -N             sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+bindkey -M vicmd '\es' sesh-sessions
+bindkey -M viins '\es' sesh-sessions
 
 # -------------------ALIAS----------------------
 # These alias need to have the same exact space as written here
@@ -52,6 +69,7 @@ export VISUAL=nvim
 alias c="clear"
 alias e="exit"
 alias vim="nvim"
+alias oc="opencode"
 alias exegol="sudo -E $(echo ~/.local/bin/exegol)"
 alias cd="z"
 alias cat="bat --paging=always --color=always"

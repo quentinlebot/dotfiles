@@ -56,6 +56,7 @@ yay -S --needed --noconfirm \
   lazygit \
   lazydocker \
   lstr \
+  sesh-bin \
   starship \
   ttf-hack-nerd \
   ttf-jetbrains-mono-nerd
