@@ -35,6 +35,10 @@ sudo pacman -S --needed --noconfirm \
   git \
   imagemagick \
   jq \
+  k9s \
+  kubectl \
+  kubectx \
+  kustomize \
   lua \
   luajit \
   luarocks \
