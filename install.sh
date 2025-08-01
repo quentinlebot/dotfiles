@@ -53,8 +53,8 @@ sudo pacman -S --needed --noconfirm \
 # Install packages from AUR
 echo "Installing AUR packages..."
 yay -S --needed --noconfirm \
-  lazygit \
   lazydocker \
+  lazygit \
   lstr \
   sesh-bin \
   starship \
@@ -76,8 +76,8 @@ fi
 echo "Installation complete..."
 
 echo "Dotfiles setup"
-# tpm
+
+# tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Dotfiles setup complete!"
-
