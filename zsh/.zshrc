@@ -68,13 +68,28 @@ bindkey -M viins '\es' sesh-sessions
 # other Aliases shortcuts
 alias c="clear"
 alias e="exit"
+alias ss="source ~/.zshrc"
 alias vim="nvim"
 alias oc="opencode"
 alias exegol="sudo -E $(echo ~/.local/bin/exegol)"
 alias cd="z"
 alias cat="bat --paging=always --color=always"
 alias pacman="sudo pacman"
-
+alias pc="tee /dev/tty | xclip -selection clipboard"
+alias pp="xclip -selection clipboard -o"
+alias sc=saveCommand
+function saveCommand() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: sc <command>"
+        return 1
+    fi
+    echo "----- CMD -----" >> "$1"
+    fc -ln 1 | tail -n1 | sed 's/ | pc//g' >>"$1"
+    echo "\n" >> "$1"
+    echo "\n--- OUPTUT -----" >> "$1"
+    pp >> "$1"
+    echo "----------\n" >> "$1"
+}
 # Tmux 
 alias tmux="tmux -f $TMUX_CONF"
 alias a="attach"
